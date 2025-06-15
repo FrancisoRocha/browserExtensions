@@ -1,39 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Browser extensions manager UI</title>
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
+  <body class="light">
+    <header class="header light">
+      <img src="./assets/images/logo.svg" alt="icon extensions" class="icon" />
+      <button class="btn__mode">
+        <img
+          src="./assets/images/icon-moon.svg"
+          alt="icon dark tem"
+          class="icon-theme"
+        />
+      </button>
+    </header>
 
-<body>
-
-  <header class="header ligth">
-    <img src="./assets/images/logo.svg" alt="icon extensions" class="icon">
-    <button class="btn__mode">
-      <img src="./assets/images/icon-moon.svg" alt="icon dark tem" class="icon-theme">
-    </button>
-  </header>
-
-  <!-- FILTRO DE BOTONES -->
-  <div class="filter__list">
-    <p class="filter__title">Extensions List</p>
-    <div class="filter__buttons">
-      <button class="btn__filter">All</button>
-      <button class="btn__filter">Active</button>
-      <button class="btn__filter">Inactive</button>
+    <!-- FILTRO DE BOTONES -->
+    <div class="filter__list">
+      <p class="filter__title">Extensions List</p>
+      <div class="filter__buttons">
+        <button class="btn__filter" data-filter="all">All</button>
+        <button class="btn__filter" data-filter="active">Active</button>
+        <button class="btn__filter" data-filter="inactive">Inactive</button>
+      </div>
     </div>
-  </div>
 
-  <div class="extension__card"></div>
+    <div class="extension__card"></div>
 
-  <script type="module" src="/scripts/main.js"></script>
-
-</body>
-
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
 </html>
