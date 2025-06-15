@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body class="">
+<body>
 
   <header class="header ligth">
     <img src="./assets/images/logo.svg" alt="icon extensions" class="icon">
-    <button type="submit" class="btn__mode">
+    <button class="btn__mode">
       <img src="./assets/images/icon-moon.svg" alt="icon dark tem" class="icon-theme">
     </button>
   </header>
@@ -24,44 +24,15 @@
   <div class="filter__list">
     <p class="filter__title">Extensions List</p>
     <div class="filter__buttons">
-      <button type="submit" class="btn__filter">All</button>
-      <button type="submit" class="btn__filter">Active</button>
-      <button type="submit" class="btn__filter">Inactive</button>
+      <button class="btn__filter">All</button>
+      <button class="btn__filter">Active</button>
+      <button class="btn__filter">Inactive</button>
     </div>
   </div>
 
-  <div class="extension__card">
-    <div class="cards ligth">
-      <!-- INFORMACION -->
-      <div class="info__card">
-        <img src="./assets/images/logo-devlens.svg" alt="icon" class="icon__card">
-        <div class="info">
-          <p class="title__card">DevLens</p>
-          <p class="text__card">
-            Quickly inspect page layouts and visualize element boundaries.
-          </p>
-        </div>
-        <!-- BOTONES -->
-        <div class="buttons__card">
-          <button class="btn__romeve">Remove</button>
-          <label class="switch">
-            <input type="checkbox" id="themeToggle">
-            <span class="slider"></span>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-    <div class="cards ligth"></div>
-  </div>
+  <div class="extension__card"></div>
+
+  <script type="module" src="/scripts/main.js"></script>
 
 </body>
 

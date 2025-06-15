@@ -244,11 +244,10 @@ body {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: -0.5px;
-    color: var(--neutral-600);
 }
 
 /** REMOVE */
-.btn__romeve {
+.btn__remove {
     width: 9.1rem;
     height: 3.8rem;
     border-radius: 10rem;
@@ -309,6 +308,24 @@ body.dark {
     box-shadow: 0 0 0 .2rem var(--neutral-600);
 }
 
+.title__card.dark{
+    color: var(--neutral);
+}
+
+.text__card.dark{
+    color: var(--neutral-300);
+}
+
+.btn__remove.dark{
+    background-color: var(--neutral-600);
+    color: var(--neutral);
+    transition: all 300ms;
+}
+
+.btn__remove.dark:hover{
+    background-color: var(--neutral-700);
+}
+
 /** LIGTH MODE ☀️ */
 
 body.ligth {
@@ -335,6 +352,15 @@ body.ligth {
 .cards.ligth {
     background-color: var(--neutral);
     box-shadow: 0 0 0 .2rem var(--neutral-200);
+}
+
+.text__card.ligth{
+    color: var(--neutral-600);
+}
+
+.btn__remove.ligth{
+    background-color: var(--neutral);
+    box-shadow: 0 0 0 .1rem var(--neutral-300);
 }
 
 /** BUTTON ACTIVATED */
