@@ -1,4 +1,5 @@
 import { data } from "./api.js";
+import { setCardEvents } from "./cardsActions.js";
 import { applyCurrentTheme } from "./darkMode.js";
 
 export const renderCars = async (filterData = null) => {
@@ -8,9 +9,10 @@ export const renderCars = async (filterData = null) => {
     const isDark = document.body.classList.contains("dark");
     cardsContainer.innerHTML = "";
 
-    items.forEach(({ logo, name, description, isActive }) => {
+    items.forEach(({ id, logo, name, description, isActive }) => {
         const cards = document.createElement("DIV");
         cards.classList.add("cards");
+        cards.dataset.id = id;
 
         const themeClass = isDark ? "dark" : "light";
 
@@ -25,7 +27,7 @@ export const renderCars = async (filterData = null) => {
             <div class="buttons__card">
                 <button class="btn__remove ${themeClass}">Remove</button>
                 <label class="switch">
-                <input type="checkbox" id="themeToggle" ${isActive ? "checked" : ""}>
+                <input type="checkbox" class="status-switch" ${isActive ? "checked" : ""}>
                 <span class="slider"></span>
                 </label>
             </div>
@@ -35,7 +37,7 @@ export const renderCars = async (filterData = null) => {
         cards.classList.add(themeClass);
         cardsContainer.appendChild(cards);
     });
-
+    setCardEvents();
     // Aplicar tema a todos los elementos después de renderizar
     setTimeout(() => {
         applyCurrentTheme();
